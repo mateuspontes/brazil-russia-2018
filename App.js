@@ -17,14 +17,13 @@ export default class App extends Component {
   }
 
   async loadJogos() {
-    await fetch(`${SDE_URL}/jogos/2/time/Brasil`)
-      .then(response => response.json())
-      .then(data => {
-        this.setState({ jogos: data, isReady: true });
-      })
-      .catch(error => {
-        console.error(error);
-      });
+    try {
+      const response = await fetch(`${SDE_URL}/jogos/2/time/Brasil`);
+      const data = await response.json();
+      this.setState({ jogos: data, isReady: true });
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   render() {
