@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, FlatList, Image } from "react-native";
-import { Container, Content, Text, StyleProvider } from "native-base";
+import { StyleSheet, View, Text, Image } from "react-native";
 
 const SDE_URL = "https://sde.cidadeverde.com.br";
 
@@ -45,7 +44,7 @@ export default class App extends Component {
     }
     const { jogos } = this.state;
     return (
-      <Container style={styles.container}>
+      <View style={styles.container}>
         <View style={styles.container__header}>
           <Text style={styles.text}>Brasil 🇧🇷</Text>
           <Text style={styles.content}>
@@ -90,7 +89,7 @@ export default class App extends Component {
             );
           })}
         </View>
-      </Container>
+      </View>
     );
   }
 }
