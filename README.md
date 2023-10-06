@@ -1,6 +1,6 @@
 # Brazil Russia 2018
 
-> Sample app to try fetch api on React Native
+> Sample app to fetch api on React Native
 
 ![Example](src/images/brasils-russia-2018.png)
 
